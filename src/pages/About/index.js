@@ -16,7 +16,8 @@ class About extends Component {
 
   async componentDidMount() {
     const response = await api.get('history');
-    this.setState(response.data);
+
+    this.setState({ text: response.data });
   };
 
   render() {
