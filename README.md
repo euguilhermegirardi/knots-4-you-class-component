@@ -46,7 +46,7 @@ The frontend was developed with [**_ReactJS_**](https://reactjs.org/) with [**_R
 
 - Clone the repo
 
-      git clone https://github.com/euguilhermegirardi/knots-4-you-class-component
+      git clone https://github.com/euguilhermegirardi/Knots-4-You-Class-Component.git
 
 3. Install NPM packages
 
