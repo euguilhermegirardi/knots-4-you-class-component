@@ -12,9 +12,11 @@ class Shop extends Component {
 
   async componentDidMount() {
     const response = await api.get('products');
-    this.setState(response.data);
+    const data = response.data.map(product => ({
+      ...product
+    }))
+    this.setState({ products: data });
   }
-
 
   render() {
     const { products } = this.state;

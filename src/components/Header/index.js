@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 import Popup from "reactjs-popup";
 
+import api from '../../services/api';
 import logo from '../../assets/logo.png';
 import { Container, Cart, Links, LinksContainer, Routes } from './styles';
 import BurgerIcon from '../../components/BurgerIcon';
@@ -30,7 +31,22 @@ const PopUpContainer = forwardRef((props, ref) => {
 });
 
 class Header extends Component {
+  state = {
+    products: [],
+  };
+
+  async componentDidMount() {
+    const response = await api.get('products');
+
+    const data = response.data.map(product => ({
+      ...product,
+    }));
+
+    this.setState({ products: data })
+  }
+
   render() {
+    const { products } = this.state;
     const { amount } = this.props;
 
     return (
@@ -55,7 +71,7 @@ class Header extends Component {
           </div>
           <div className="cart">
             <MdShoppingBasket size={36} color="#474547" />
-            <p>{amount || 0}</p>
+            <p>{amount[products.id] || 0}</p>
           </div>
         </Cart>
       </Container>

@@ -21,21 +21,13 @@ class Product extends Component {
   };
 
   componentDidMount() {
-    const id = this.props.match.params.id;
-    this.fetchData(id);
-  };
+    const { id } = this.props.match.params
 
-  fetchData = id => {
-    async function loadProduct() {
-      await api.get(`products/${id}`)
-        .then(response => {
-          this.setState(response.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    loadProduct();
+    api.get(`products/${id}`)
+      .then((product) => {
+        this.setState({ product: product.data })
+        // console.log(product.data)
+      })
   };
 
   handleAddProduct = id => {
