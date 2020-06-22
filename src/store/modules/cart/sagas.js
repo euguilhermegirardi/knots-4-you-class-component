@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
 import { addToCartSuccess, updateAmountSuccess } from './actions';
-import { formatPrice } from '../../../utils/format';
 
 // function* = 'generator' = async / yield = await.
 function* addToCart({ id }) {
@@ -41,8 +40,7 @@ function* addToCart({ id }) {
 
     const data = {
       ...response.data,
-      amount: 1,
-      priceFormatted: formatPrice(response.data.price),
+      amount: 1
     }
     // console.log(data);
 
