@@ -46,7 +46,6 @@ class Header extends Component {
   }
 
   render() {
-    const { products } = this.state;
     const { amount } = this.props;
 
     return (
@@ -71,7 +70,7 @@ class Header extends Component {
           </div>
           <div className="cart">
             <MdShoppingBasket size={36} color="#474547" />
-            <p>{amount[products.id] || 0}</p>
+            <p>{amount || 0}</p>
           </div>
         </Cart>
       </Container>
@@ -83,10 +82,7 @@ class Header extends Component {
 // To show the quantity of products the user has. It will show in the small cart in 'home'.
 const mapStateToProps = state => ({
   // amount = id of the product and the quantity.
-  amount: state.cart.reduce((amount, product) => {
-    (amount[product.id] = product.amount);
-    return amount;
-  }, {}) // To initialize the amount as 'zero'.
+  amount: state.cart.length,
 });
 
 export default connect(mapStateToProps, null)(Header);

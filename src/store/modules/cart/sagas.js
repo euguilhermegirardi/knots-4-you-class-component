@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
 import { addToCartSuccess, updateAmountSuccess } from './actions';
+import history from '../../../services/history';
 
 // function* = 'generator' = async / yield = await.
 function* addToCart({ id }) {
@@ -46,6 +47,7 @@ function* addToCart({ id }) {
 
     // put = to trigger an action.
     yield put(addToCartSuccess(data));
+    history.push('/cart');
   }
 
 };

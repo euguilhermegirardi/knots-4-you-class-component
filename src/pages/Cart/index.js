@@ -112,6 +112,7 @@ const mapStateToProps = state => ({
   // Perfect place to do the Subtotal and Total calculation.
   cart: state.cart.map(product => ({
     ...product,
+    subtotal: (product.price * product.amount)
   })),
   total:
     // 'reduce' is used when you want to get an array and reduce into just one value.
