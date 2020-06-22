@@ -19,6 +19,20 @@ export const Form = styled.form`
       display: flex;
       flex: 1;
       flex-direction: column;
+
+
+      input.error {
+        border: 1px solid red;
+      }
+
+      .errorMessage {
+        color: red;
+        font-size: 0.75em;
+        display: relative;
+      }
+
+
+
     }
 
     .header__name:nth-child(1) {

@@ -82,7 +82,7 @@ class Product extends Component {
               <h2>{product.title}</h2>
               <p>€ {product.price}</p>
 
-              <button className="btn" type="button" onClick={() => handleAddProducts(product.id)}>
+              <button className="btn" type="button" onClick={() => this.handleAddProduct(product.id)}>
                 <div>
                   <MdShoppingCart size={16} color="#FFF" />
                   {amount[product.id] || 0}
