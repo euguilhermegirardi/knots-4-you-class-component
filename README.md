@@ -1,68 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Knots-4-You
 
-## Available Scripts
+This is the frontend of the **Knots-4-You** project.
+This is a project where I could use many professional techniques that is used in "the real world".
 
-In the project directory, you can run:
+## About the project
 
-### `yarn start`
+- The **Knots-4-You** is an e-commerce website.
+- The website has a home page saying a few things about the website's owner and it gives some tips for those who are starting to work with macrame, the 'Shop' page where the **_user_** can see all the products for sale, the 'About' page where it says a brief history about the macrame, the 'Contact' page where the **_user_** can contact the website's owner, the 'Product' page where the **_user_** is send when he/she clicks in the product, before add to the cart and also the 'Cart' page where the user can see all the products that is added to the cart.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The frontend
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The frontend was developed with [**_ReactJS_**](https://reactjs.org/) with [**_Redux-Saga_**](https://redux-saga.js.org/) using [**_axios_**](https://www.npmjs.com/package/axios) to request the [**_json-server_**](https://www.npmjs.com/package/json-server) API.
+[**_react-router-dom_**](https://www.npmjs.com/package/react-router-dom) was used to handle the routes in this application.
 
-### `yarn test`
+**Home**
+![home](.github/home.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Shop**
+![shop](.github/shop.png)
 
-### `yarn build`
+**About**
+![about](.github/about.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Contact**
+![contact](.github/contact.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Empty Cart**
+![emptycart](.github/emptycart.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Product**
+![product](.github/product.png)
 
-### `yarn eject`
+**Cart**
+![cart](.github/cart.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- npm
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+      npm install npm@latest -g
 
-## Learn More
+2. Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Clone the repo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      git clone https://github.com/euguilhermegirardi/knots-4-you-class-component
 
-### Code Splitting
+3. Install NPM packages
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+   npm install
 
-### Analyzing the Bundle Size
+4. Run the application
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+   json-server server.json -p 3333
+   npm run start
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a pull request
 
-### Advanced Configuration
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![MIT](https://img.shields.io/badge/License-MIT-blue.svg)
