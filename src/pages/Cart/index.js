@@ -81,7 +81,7 @@ function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
                     <strong>€ {product.subtotal}</strong>
                   </td>
                   <td className="remove-from-cart">
-                    <button type="button" onClick={() => dispatch(CartActions.removeFromCart(product.id))} >
+                    <button type="button" onClick={() => removeFromCart(product.id)} >
                       <MdDelete size={20} color="#474547" />
                     </button>
                   </td>
