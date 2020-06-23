@@ -31,8 +31,6 @@ export const Form = styled.form`
         display: relative;
       }
 
-
-
     }
 
     .header__name:nth-child(1) {

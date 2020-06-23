@@ -43,7 +43,7 @@ class Contact extends Component {
 
     if (formValid(this.state)) {
       console.log(`
-
+        --SUBMITTING--
         First Name: ${this.state.firstName}
         Last Name: ${this.state.lastName}
         Email: ${this.state.email}
